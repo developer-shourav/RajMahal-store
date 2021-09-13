@@ -5,11 +5,15 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>RajMahal Store</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/846d4878cc.js" crossorigin="anonymous"></script>
+
 
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,28 +22,35 @@
 </head>
 
 <body>
-  <header></header>
+  <header>
+    
+    <h1 class="text-center webpag-name " title="Welcome to RajMahal Store">Welcome to RajMahal Store</h1>
+  </header>
   <main class="main">
-    <div class="search-field">
+    <div class="search-field mt-0">
       <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+        <input id="input-field" placeholder="Search the product " class="search-field" type="text" />
+        <button type="button" class="search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
         </button>
       </div>
     </div>
-    <div class="row">
+
+     <div class="main-content-section">
+       <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
-          <h1></h1>
+        <div id="all-products" class="total-products ">
         </div>
       </div>
+      <!--=================================================
+         Total price and product percing calculation area 
+        =================================================-->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
             <thead>
-              <h1>My-Cart</h1>
+              <h1>My-Cart <span><img src="img/cute.gif" alt="" width="100"></span></h1>
               <tr>
                 <th scope="col"></th>
                 <th scope="col"></th>
@@ -50,7 +61,8 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <!-- removing dollar sign and unnecessary span tag -->
+                <td id="total-Products"> 0 </td>
                 <td></td>
                 <td></td>
               </tr>
@@ -80,11 +92,12 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class=" buying-btn  text-center">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
+     </div>
   </main>
   <footer></footer>
 
@@ -92,4 +105,4 @@
   <script src="./js/app.js"></script>
 </body>
 
-</html>
+</html> 
